@@ -16,7 +16,7 @@ class Usuario {
     };
 
     countMascotas() {
-        return mascotas.length;
+        return(`La cantidad de mascotas son : ${mascotas.length}`);
     };
 
     addBook(nombreLibro, autor) {
@@ -31,9 +31,8 @@ class Usuario {
         let librosArr = [];
         libros.forEach((e) => {
             librosArr.push(e.nombreLibro);
-            console.log(librosArr)
         });
-        return;
+        return(`Los siguientes nombres de libros estan en nuestra biblioteca: ${librosArr}`);
     };
 }
 
@@ -42,11 +41,11 @@ let usuarioNuevo = new Usuario(
     this.apellido = "Sosa",
     this.libros = [
         {
-            nombreLibro: "Lo que el viento se llevo",
+            nombreLibro: " Lo que el viento se llevo",
             autor: "Margaret Mitchell"
         },
         {
-            nombreLibro: "El principito",
+            nombreLibro: " El principito",
             autor: "Antoine de Saint-Exupéry"
         }
     ],
@@ -57,5 +56,5 @@ console.log(usuarioNuevo);
 console.log(usuarioNuevo.getFullName());
 usuarioNuevo.addMascota("Loro");
 console.log(usuarioNuevo.countMascotas());
-usuarioNuevo.addBook("Book1","Autor1");
+usuarioNuevo.addBook(" Book1","Autor1");
 usuarioNuevo.getBookNames();
