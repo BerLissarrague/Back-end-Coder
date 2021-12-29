@@ -5,52 +5,57 @@ class Usuario {
         this.libros = libros
         this.mascotas = mascotas
     }
+    //Funciones
+    getFullName() {
+        return (`El nombre es ${this.nombre}, ${this.apellido}`);
+    };
+
+    addMascota(nombreMascota) {
+        mascotas.push(nombreMascota)
+        return;
+    };
+
+    countMascotas() {
+        return mascotas.length;
+    };
+
+    addBook(nombreLibro, autor) {
+        libros.push({
+            nombreLibro,
+            autor
+        });
+        return;
+    };
+
+    getBookNames() {
+        let librosArr = [];
+        libros.forEach((e) => {
+            librosArr.push(e.nombreLibro);
+            console.log(librosArr)
+        });
+        return;
+    };
 }
 
-let librosArr = [];
-
-let usuarioNuevo = new Usuario("Ismael","Sosa",
-    [
-            {   nombreLibro: "Lo que el viento se llevo",
-                autor: "Margaret Mitchell"
-            },
-            {   nombreLibro: "El principito",
-                autor: "Antoine de Saint-Exupéry"
-            }
-          ],
-    ["pero","gato","pez"]
+let usuarioNuevo = new Usuario(
+    this.nombre = "Ismael",
+    this.apellido = "Sosa",
+    this.libros = [
+        {
+            nombreLibro: "Lo que el viento se llevo",
+            autor: "Margaret Mitchell"
+        },
+        {
+            nombreLibro: "El principito",
+            autor: "Antoine de Saint-Exupéry"
+        }
+    ],
+    this.mascotas = ["Perro", "Gato", "Peces"]
 );
 
-console.log(getFullName());
-addMascota("pajaro");
-console.log(countMascotas());
-addBook("Book1","Autor1");
-getBookNames();
-console.log(librosArr);
 console.log(usuarioNuevo);
-
-//funciones
-function getFullName() {
-    return (`El nombre es ${usuarioNuevo.nombre}, ${usuarioNuevo.apellido}`);
-};
-
-function addMascota(nombreMascota) {
-    usuarioNuevo.mascotas.push(nombreMascota);
-    return;
-};
-
-function countMascotas() {
-    return usuarioNuevo.mascotas.length;
-};
-
-function addBook(nombreLibro, autor) {
-    usuarioNuevo.libros.push({nombreLibro, autor});
-    return;
-};
-
-function getBookNames() {
-    usuarioNuevo.libros.forEach((element) =>{       
-        librosArr.push(element.nombreLibro);     
-    });
-    return;
-};
+console.log(usuarioNuevo.getFullName());
+usuarioNuevo.addMascota("Loro");
+console.log(usuarioNuevo.countMascotas());
+usuarioNuevo.addBook("Book1","Autor1");
+usuarioNuevo.getBookNames();
