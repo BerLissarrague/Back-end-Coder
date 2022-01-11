@@ -1,0 +1,20 @@
+{
+  "name": "back-end-coder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ejercicio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BerLissarrague/Back-end-Coder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BerLissarrague/Back-end-Coder/issues"
+  },
+  "homepage": "https://github.com/BerLissarrague/Back-end-Coder#readme"
+}
